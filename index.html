@@ -18,7 +18,331 @@
     <title>Module 6 Live test 1</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <style>
+      /* Background Image for the Hero Section */
+
+      .hero-section {
+        background-image: url(/bg.png);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      /* Positioning for Relative and Absolute */
+      .relative-position {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+      }
+
+      .absolute-position {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 18px;
+      }
+
+      /* Section Spacing */
+      .section {
+        margin-top: 50px;
+        padding: 40px;
+      }
+
+      /* Table Styling */
+      .custom-table th,
+      .custom-table td {
+        border: 1px solid rgb(52, 58, 64);
+      }
+
+      /* Custom Buttons Styling */
+      .custom-btn {
+        background-color: rgb(52, 58, 64);
+        color: white;
+        border: 1px solid rgb(52, 58, 64);
+        margin: 5px;
+      }
+
+      .custom-btn:hover {
+        background-color: rgb(33, 37, 41);
+        border: 1px solid rgb(33, 37, 41);
+      }
+
+      /* Footer Styling */
+      .footer {
+        background-color: rgb(33, 37, 41);
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Typography */
+      .custom-heading {
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      .custom-text {
+        font-family: "Verdana", sans-serif;
+        font-size: 18px;
+      }
+
+      /* Z-Index Example */
+      .z-index-example {
+        position: relative;
+        z-index: 1;
+        background-color: rgb(0, 123, 255);
+        padding: 20px;
+      }
+
+      .z-index-example-2 {
+        position: relative;
+        z-index: 2;
+        background-color: rgb(255, 193, 7);
+        padding: 20px;
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">MyWebsite</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content Section -->
+    <section class="container mt-5">
+      <h2 class="text-center">Welcome to Our Website</h2>
+
+      <p class="text-muted">
+        This is a sample webpage demonstrating various HTML elements styled with
+        Bootstrap.
+        <span class="text-primary">Explore the features below!</span>
+      </p>
+
+      <hr />
+
+      <!-- Dropdown -->
+      <div class="mb-3">
+        <label for="options" class="form-label">Choose an option:</label>
+        <select id="options" class="form-select">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+
+      <!-- Audio -->
+      <div class="mb-3">
+        <label class="form-label">Listen to an audio clip:</label> <br />
+        <audio controls>
+          <source src="audio-sample.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Video -->
+      <div class="mb-3">
+        <label class="form-label">Watch this video:</label> <br />
+        <video controls width="100%">
+          <source src="video-sample.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Radio Buttons -->
+      <div class="mb-3">
+        <label class="form-label">Select an option:</label> <br />
+        <input type="radio" name="radioOptions" id="radio1" />
+        <label for="radio1">Option A</label> <br />
+        <input type="radio" name="radioOptions" id="radio2" />
+        <label for="radio2">Option B</label>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="mb-3">
+        <label class="form-label">Select your preferences:</label> <br />
+        <input type="checkbox" id="checkbox1" />
+        <label for="checkbox1">Preference 1</label> <br />
+        <input type="checkbox" id="checkbox2" />
+        <label for="checkbox2">Preference 2</label>
+      </div>
+
+      <br />
+      <!-- Line Break -->
+    </section>
+
+    <!-- Table Section -->
+    <section class="container mt-5">
+      <h2 class="text-center">Data Table</h2>
+
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>28</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Michael Johnson</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="container mt-5">
+      <h2 class="text-center">Styled Buttons</h2>
+
+      <div class="d-flex justify-content-around flex-wrap">
+        <!-- Button 1 -->
+        <button class="btn btn-primary mb-3">Primary</button>
+
+        <!-- Button 2 -->
+        <button class="btn btn-secondary mb-3">Secondary</button>
+
+        <!-- Button 3 -->
+        <button class="btn btn-success mb-3">Success</button>
+
+        <!-- Button 4 -->
+        <button class="btn btn-danger mb-3">Danger</button>
+
+        <!-- Button 5 -->
+        <button class="btn btn-warning mb-3">Warning</button>
+
+        <!-- Button 6 -->
+        <button class="btn btn-info mb-3">Info</button>
+
+        <!-- Button 7 -->
+        <button class="btn btn-light mb-3">Light</button>
+
+        <!-- Button 8 -->
+        <button class="btn btn-dark mb-3">Dark</button>
+
+        <!-- Button 9 -->
+        <button class="custom-btn mb-3">Custom 1</button>
+
+        <!-- Button 10 -->
+        <button class="custom-btn-2 mb-3">Custom 2</button>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container mt-5">
+      <h2 class="text-center">Contact Us</h2>
+
+      <form>
+        <!-- Name Input -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <!-- Email Input -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- Subject Input -->
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            placeholder="Enter the subject"
+            required
+          />
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="4"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer mt-5 text-center">
+      <div class="container">
+        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>
+          <a href="#" class="text-decoration-none text-light">Privacy Policy</a>
+          |
+          <a href="#" class="text-decoration-none text-light"
+            >Terms of Service</a
+          >
+        </p>
+      </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
